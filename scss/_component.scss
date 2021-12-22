@@ -2,21 +2,36 @@
 
 .intro {
   &__bg {
+    position: absolute;
+    background-color: $color-secondary--light;
+    width: 50%;
+    height: 55%;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 5rem;
+    z-index: -1;
   }
 
   &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
+    width: 2.5rem;
   }
 
   &__button {
+    background-color: transparent;
+    border: none;
   }
 
   &__hamburger {
   }
 
   &__navigation {
+    display: none;
   }
 
   &__list {
@@ -31,35 +46,84 @@
   }
 
   &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  &__picture-wrapper {
+    overflow-x: hidden;
   }
 
   &__picture {
+    width: 138%;
   }
 
   &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 3rem;
+    max-width: 36rem;
   }
 
   &__heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
   }
 
   &__new {
+    color: $color-secondary--light;
+    background-color: $color-secondary--veryDark;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
   }
 
   &__monograph {
+    color: $color-secondary;
+    letter-spacing: 0.5rem;
   }
 
   &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1;
   }
 
   &__subtitle {
+    color: $color-secondary;
+    font-family: $font-secondary;
+    font-weight: normal;
+    font-size: 1.6rem;
+    max-width: 27rem;
   }
 
   &__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
   }
 
   &__schedule {
+    color: $color-secondary--light;
+    background-color: $color-primary;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    padding: 1.3rem 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
   }
 
   &__text {
+    color: $color-secondary;
+    letter-spacing: 0.3rem;
+    font-size: 1.4rem;
   }
 }
