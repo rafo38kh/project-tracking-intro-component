@@ -1,2 +1,65 @@
 @use "./base" as *;
-@use "./mixins" as *;
+
+.intro {
+  &__bg {
+  }
+
+  &__header {
+  }
+
+  &__logo {
+  }
+
+  &__button {
+  }
+
+  &__hamburger {
+  }
+
+  &__navigation {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+    &--login {
+    }
+  }
+
+  &__main {
+  }
+
+  &__picture {
+  }
+
+  &__info-wrapper {
+  }
+
+  &__heading-wrapper {
+  }
+
+  &__new {
+  }
+
+  &__monograph {
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
+
+  &__links {
+  }
+
+  &__schedule {
+  }
+
+  &__text {
+  }
+}
