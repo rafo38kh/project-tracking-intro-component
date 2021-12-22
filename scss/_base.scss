@@ -1,0 +1,26 @@
+$color--primary: hsl(0, 100%, 68%);
+$color-secondary--veryDark: hsl(230, 29%, 20%);
+$color-secondary--dark: hsl(230, 11%, 40%);
+$color-secondary: hsl(231, 7%, 65%);
+$color-secondary--light: hsl(207, 33%, 95%);
+
+$font--primary: "Barlow Condensed", sans-serif; // - Weights: 400, 700
+$font-secondary: "Barlow", sans-serif; //- Weights: 400
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font--primary;
+}
