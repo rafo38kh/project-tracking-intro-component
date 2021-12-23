@@ -27,7 +27,7 @@ This is a solution to the [Project Tracking Intro Component Challenge on Fronten
 ### Links
 
 - Solution URL: []()
-- Live Site URL: []()
+- Live Site URL: [https://rafo38kh.github.io/project-tracking-intro-component/](https://rafo38kh.github.io/project-tracking-intro-component/)
 
 ## My process
 
@@ -36,6 +36,7 @@ This is a solution to the [Project Tracking Intro Component Challenge on Fronten
 - Semantic HTML5 markup
 - SCSS custom properties
 - CSS Flexbox
+- Vanilla JS
 - Mobile-first workflow
 
 ## Author
