@@ -4,8 +4,8 @@
   &__bg {
     position: absolute;
     background-color: $color-secondary--light;
-    width: 50%;
-    height: 55%;
+    width: 49%;
+    height: 56%;
     top: 0;
     right: 0;
     border-radius: 0 0 0 5rem;
@@ -16,32 +16,147 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__logo {
     width: 2.5rem;
+
+    @media (min-width: 1140px) {
+      width: 3.2rem;
+    }
   }
 
   &__button {
     background-color: transparent;
     border: none;
+
+    @media (min-width: 1140px) {
+      display: none;
+    }
   }
 
-  &__hamburger {
-  }
+  //   &__hamburger {
+  //   }
 
   &__navigation {
-    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 5rem;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+
+    @media (min-width: 1140px) {
+      all: unset;
+      display: block;
+    }
+
+    &.nav__active {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.3s;
+    }
   }
 
   &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+    list-style: none;
+
+    @media (min-width: 1140px) {
+      flex-direction: row;
+      gap: 4rem;
+    }
   }
 
   &__item {
+    position: relative;
+    transition: all 0.3s;
+
+    &--login {
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 1140px) {
+      &:hover {
+        cursor: pointer;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $color-secondary--veryDark;
+          width: 100%;
+          height: 0.1rem;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      &--login {
+        margin: 0 0 0 5rem;
+
+        &:hover {
+          &::before {
+            background-color: $color-secondary;
+          }
+        }
+      }
+    }
   }
 
   &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-secondary--veryDark;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+
     &--login {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $color-secondary;
+        width: 24rem;
+        height: 0.1rem;
+        top: -2rem;
+        left: -10rem;
+      }
+
+      &:link,
+      &:visited {
+        color: $color-secondary;
+      }
+    }
+
+    @media (min-width: 1140px) {
+      &:link,
+      &:visited {
+        font-size: 1.5rem;
+      }
+
+      &--login {
+        &::before {
+          content: "";
+          background-color: rgba($color-secondary, 0.4);
+          width: 0.6rem;
+          height: 0.6rem;
+          left: -5rem;
+          top: 0.7rem;
+          border-radius: 50%;
+        }
+      }
     }
   }
 
@@ -50,6 +165,11 @@
     flex-direction: column;
     gap: 10rem;
     padding-bottom: 10rem;
+
+    @media (min-width: 1140px) {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
   }
 
   &__picture-wrapper {
@@ -65,7 +185,12 @@
     flex-direction: column;
     gap: 2rem;
     padding: 0 3rem;
-    max-width: 36rem;
+    max-width: 60rem;
+
+    @media (min-width: 1140px) {
+      min-width: 70rem;
+      padding: 0 5rem 0 16.5rem;
+    }
   }
 
   &__heading-wrapper {
@@ -73,7 +198,6 @@
     align-items: center;
     gap: 2rem;
     text-transform: uppercase;
-    font-size: 1.5rem;
   }
 
   &__new {
@@ -82,15 +206,17 @@
     padding: 0.3rem 1rem;
     border-radius: 2rem;
     font-weight: 700;
+    font-size: 1.5rem;
   }
 
   &__monograph {
     color: $color-secondary;
     letter-spacing: 0.5rem;
+    font-size: 1.5rem;
   }
 
   &__title {
-    font-size: 4rem;
+    font-size: clamp(4rem, 5vw, 6.5rem);
     text-transform: uppercase;
     line-height: 1;
   }
@@ -99,7 +225,7 @@
     color: $color-secondary;
     font-family: $font-secondary;
     font-weight: normal;
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 1.5vw, 1.8rem);
     max-width: 27rem;
   }
 
@@ -108,6 +234,10 @@
     align-items: center;
     gap: 1rem;
     text-transform: uppercase;
+
+    @media (min-width: 1140px) {
+      margin-top: 5rem;
+    }
   }
 
   &__schedule {
@@ -118,12 +248,40 @@
     padding: 1.3rem 2rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
   }
 
   &__text {
     color: $color-secondary;
     letter-spacing: 0.3rem;
-    font-size: 1.4rem;
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+  }
+
+  &__attribution {
+    width: 100%;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0rem 0 1rem 0;
+
+    &-link:link,
+    &-link:visited {
+      text-transform: uppercase;
+      color: $color-primary;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: $color-primary;
+      text-decoration: underline;
+    }
   }
 }

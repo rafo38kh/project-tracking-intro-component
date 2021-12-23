@@ -4,8 +4,8 @@ $color-secondary--dark: hsl(230, 11%, 40%);
 $color-secondary: hsl(231, 7%, 65%);
 $color-secondary--light: hsl(207, 33%, 95%);
 
-$font-primary: "Barlow Condensed", sans-serif; // - Weights: 400, 700
-$font-secondary: "Barlow", sans-serif; //- Weights: 400
+$font-primary: "Barlow Condensed", sans-serif;
+$font-secondary: "Barlow", sans-serif;
 
 *,
 *::before,
@@ -26,5 +26,4 @@ body {
   background-color: #fff;
   position: relative;
   min-height: 100vh;
-  // display: grid;
 }
